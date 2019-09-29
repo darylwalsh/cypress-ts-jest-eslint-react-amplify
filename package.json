@@ -7,7 +7,7 @@
     "test": "...",
     "build": "next build",
     "dev": "next",
-    "lint": "eslint src/**/*.ts*  src/*.ts*",
+    "lint": "eslint *.ts*",
     "start": "next start",
     "type-check": "tsc",
     "styleguide:build": "...",
