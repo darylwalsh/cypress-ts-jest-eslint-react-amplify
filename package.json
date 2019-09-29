@@ -80,7 +80,7 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged",
-      "pre-push": "tsc && npm lint"
+      "pre-push": "tsc && npm run lint"
     }
   },
   "lint-staged": {
