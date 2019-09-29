@@ -1,6 +1,6 @@
 {
   "name": "cypress-ts-jest-eslint-react-amplify",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "cypress typescript jest react amplify",
   "scripts": {
     "commit": "git-cz",
