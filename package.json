@@ -1,6 +1,6 @@
 {
   "name": "cypress-ts-jest-eslint-react-amplify",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "cypress typescript jest react amplify",
   "scripts": {
     "build": "next build && next export -o build/",
