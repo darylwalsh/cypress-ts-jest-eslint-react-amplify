@@ -1,0 +1,12 @@
+projects:
+  paginationandsorting:
+    schemaPath: amplify/backend/api/paginationandsorting/build/schema.graphql
+    includes:
+      - src/graphql/**/*.ts
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: typescript
+        generatedFileName: src/API.ts
+        docsFilePath: src/graphql

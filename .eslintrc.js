@@ -1,4 +1,10 @@
 module.exports = {
+  env: {
+    browser: true,
+    es6: true,
+    "jest/globals": true,
+    "cypress/globals": true
+  },
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
@@ -12,11 +18,12 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: "module"
   },
+
   parser: "@typescript-eslint/parser",
-  plugins: ["react"],
+  plugins: ["@typescript-eslint", "react", "jest", "cypress"],
   rules: {
-    // I usually turn off these rules out of personal, feel free to delete the rules section in your project
     "@typescript-eslint/explicit-function-return-type": "off",
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    "@typescript-eslint/ban-ts-ignore": "off"
   }
-}
+};

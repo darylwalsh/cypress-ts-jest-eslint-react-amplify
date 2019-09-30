@@ -1,31 +1,25 @@
-# TypeScript Next.js example
+## Building a group chat app with AWS Amplify
 
-This is a really simple project that show the usage of Next.js with TypeScript.
+The motivation behind this example is to explore the handling of live lists of sorted data with Amplify API (AppSync & GraphQL Transformer).
 
-## How to use it?
+The app consists of 3 routes:
 
-### Using `create-next-app`
+- `channel?id={id}` A chat room identified by an id. A user can send and receive messages in real-time. Messages are sorted by descending message creation data (newest at the bottom).
 
-Execute [`create-next-app`](https://github.com/segmentio/create-next-app) with [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) or [npx](https://github.com/zkat/npx#readme) to bootstrap the example:
+- `channels` A list of channels sorted by ascending last update date (newest always at the top).
 
-```bash
-npx create-next-app --example with-typescript with-typescript-app
-# or
-yarn create next-app --example with-typescript with-typescript-app
+- `me` A form that a user can fill to share more about themselves.
+
+
+### Clone the repo
+
+```sh
+git clone https://github.com/rakannimer/pagination-and-sorting-with-aws-amplify
 ```
 
-### Download manually
+### Run locally
 
-Download the example:
-
-```bash
-curl https://codeload.github.com/zeit/next.js/tar.gz/canary | tar -xz --strip=2 next.js-canary/examples/with-typescript
-cd with-typescript
-```
-
-Install it and run:
-
-```bash
+```sh
 npm install
 npm run dev
 # or
@@ -33,22 +27,24 @@ yarn
 yarn dev
 ```
 
-## The idea behind the example
+### Deploy your own
 
-This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
+#### From the console
+
+[![amplifybutton](https://oneclick.amplifyapp.com/button.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/rakannimer/pagination-and-sorting-with-aws-amplify)
+
+#### From the amplify cli
+
+```sh
+rm src/aws-exports.js
+rm -rf amplify
+
+amplify init
+
+amplify add api
+
+# When prompted for a schema, point to ./schema.graphql
+
+amplify push
 
 ```
-npm install --save-dev typescript
-```
-
-To enable TypeScript's features, we install the type declaratons for React and Node.
-
-```
-npm install --save-dev @types/react @types/react-dom @types/node
-```
-
-When we run `next dev` the next time, Next.js will start looking for any `.ts` or `.tsx` files in our project and builds it. It even automatically creates a `tsconfig.json` file for our project with the recommended settings.
-
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
-
-A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
