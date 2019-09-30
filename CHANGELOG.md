@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.9](https://github.com/darylwalsh/cypress-ts-jest-eslint-react-amplify/compare/v0.1.8...v0.1.9) (2019-09-30)
+
+
+### Features
+
+* **fix_eslint:** update eslint for prettierrc ([d9a710c](https://github.com/darylwalsh/cypress-ts-jest-eslint-react-amplify/commit/d9a710c))
+
 ### [0.1.8](https://github.com/darylwalsh/cypress-ts-jest-eslint-react-amplify/compare/v0.1.7...v0.1.8) (2019-09-30)
 
 
