@@ -20,11 +20,21 @@ module.exports = {
   },
 
   parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint", "react", "jest", "cypress"],
+  plugins: ["@typescript-eslint", "react", "jest", "cypress","prettier"],
   rules: {
     "@typescript-eslint/explicit-function-return-type": "off",
     "react/prop-types": "off",
     "@typescript-eslint/ban-ts-ignore": "off",
+    '@typescript-eslint/member-delimiter-style': {
+      "multiline": {
+        "delimiter": "none",
+        "requireLast": false
+      },
+      "singleline": {
+        "delimiter": "comma",
+        "requireLast": false
+      }
+    },
     'prettier/prettier': ['error']
   }
 };
