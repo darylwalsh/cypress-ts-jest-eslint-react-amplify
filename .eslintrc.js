@@ -25,7 +25,7 @@ module.exports = {
     "@typescript-eslint/explicit-function-return-type": "off",
     "react/prop-types": "off",
     "@typescript-eslint/ban-ts-ignore": "off",
-    '@typescript-eslint/member-delimiter-style': {
+    '@typescript-eslint/member-delimiter-style': ["error", {
       "multiline": {
         "delimiter": "none",
         "requireLast": false
@@ -34,7 +34,7 @@ module.exports = {
         "delimiter": "comma",
         "requireLast": false
       }
-    },
+    }],
     'prettier/prettier': ['error']
   }
 };
