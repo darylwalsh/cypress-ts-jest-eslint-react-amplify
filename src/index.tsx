@@ -1,11 +1,11 @@
-import * as React from "react";
-import { render } from "react-dom";
-import { ChannelsRoute } from "./components/Channels";
+import * as React from 'react'
+import { render } from 'react-dom'
+import { ChannelsRoute } from './components/Channels'
 
 const App = () => {
-  return <ChannelsRoute />;
-};
+  return <ChannelsRoute />
+}
 
-render(<App />, document.getElementById("#root"));
+render(<App />, document.getElementById('#root'))
 
-export default App;
+export default App

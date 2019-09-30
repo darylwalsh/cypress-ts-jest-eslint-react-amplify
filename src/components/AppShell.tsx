@@ -7,7 +7,7 @@ import { State, Dispatcher } from '../types'
 import { DispatcherContext } from '../state'
 import { useModels } from '../models/ModelsContext'
 
-const AppShell: React.FC<{ state: State, dispatch: Dispatcher }> = ({
+const AppShell: React.FC<{ state: State; dispatch: Dispatcher }> = ({
   state,
   dispatch,
   children,

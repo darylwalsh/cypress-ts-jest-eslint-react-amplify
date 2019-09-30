@@ -18,7 +18,7 @@ import { ChannelType, State } from '../types'
 import AppShell from './AppShell'
 import { InputZone } from './InputZone'
 
-type Props = { channel: ChannelType, me: State['me'] }
+type Props = { channel: ChannelType; me: State['me'] }
 
 const ChannelCard = (props: Props) => {
   const dispatch = React.useContext(DispatcherContext)
